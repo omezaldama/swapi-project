@@ -6,23 +6,23 @@ This is an app built with NestJs to query and save people and planets from the [
 
 Clone the repository
 ```bash
-$ git clone git@github.com:omezaldama/swapi-project.git
+git clone git@github.com:omezaldama/swapi-project.git
 ```
 
 Cd into the repo
 ```bash
-$ cd swapi-project
+cd swapi-project
 ```
 
 Copy the environment variables file
 ```bash
-$ cp .env.example .env
+cp .env.example .env
 ```
 and make the necessary modifications to match your Postgres configurations.
 
 Install dependencies
 ```bash
-$ npm install
+npm install
 ```
 
 ## Running the app
@@ -30,22 +30,22 @@ $ npm install
 Once you have installed the app, you can run with:
 ```bash
 # development
-$ npm run start
+npm run start
 
 # listen for changes
-$ npm run start:dev
+npm run start:dev
 ```
 
 App will run in `http://localhost:3000`. Swagger documentation can be found in
 ```bash
-$ http://localhost:3000/api
+http://localhost:3000/api
 ```
 
 ## Unit testing
 
 Run tests with
 ```bash
-$ npm run test
+npm run test
 ```
 
 ## SQL Query
