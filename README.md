@@ -1,6 +1,6 @@
 ## Description
 
-This is an app built with NestJs to query and save people and planets from the [Star Wars Api](https://swapi.dev/). It uses ExpressJs as an application server and Postgres as a database.
+This is an app built with NestJs (Typescript) to query and save people and planets from the [Star Wars Api](https://swapi.dev/). It uses a Postgres database.
 
 ## Installation
 
@@ -18,7 +18,7 @@ Copy the environment variables file
 ```bash
 cp .env.example .env
 ```
-and make the necessary modifications to match your Postgres configurations.
+and make the necessary modifications to match your Postgres connection configurations.
 
 Install dependencies
 ```bash
@@ -36,10 +36,14 @@ npm run start
 npm run start:dev
 ```
 
-App will run in `http://localhost:3000`. Swagger documentation can be found in
+App will run in `http://localhost:3000`. Open API (Swagger) documentation can be found in
 ```bash
 http://localhost:3000/api
 ```
+
+The app has two modules: Planets and People. Both have 2 GET endpoints, one to obtain a number of pages of data from Swapi, and another one to obtain a specific item from the database if it has been queried before or from Swapi otherwise. Additionally, the people module has a POST endpoint that saves a person into the database.
+
+The app connects to a Postgres database; the username, password, etc., can be configured by environment variables using a .env file. There are two models: Person and Planet, and their corresponding tables are created: person and planet, respectively; the ORM used is TypeORM.
 
 ## Unit testing
 
