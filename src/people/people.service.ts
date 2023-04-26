@@ -50,7 +50,7 @@ export class PeopleService {
     return this.peopleRepository.findOneBy({ externalId: personSwapiId });
   }
 
-  private async getPersonBySwapiIdFromSwapi(swapiPersonId: number): Promise<Person | null> {
+  public async getPersonBySwapiIdFromSwapi(swapiPersonId: number): Promise<Person | null> {
     const swapiPerson = await this.swapiService.getPersonById(swapiPersonId);
     if (swapiPerson !== null) {
       const person = this.buildPerson(swapiPerson);
